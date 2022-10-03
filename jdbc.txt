@@ -1,0 +1,34 @@
+try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/store","root","root");
+            Statement stmt = connect.createStatement();
+            ResultSet ors = stmt.executeQuery("Select Password from login");
+            ResultSet nrs = stmt.executeQuery("Select Username from login");
+            
+            while(ors.next()) {
+                if(opass.equals(ors.getString("Password")) && nrs.equals(nrs.getString("Username"))) {
+                    
+                    Statement trun = connect.createStatement();
+                    trun.execute("Truncate login");
+                    trun.close();
+                    
+                    PreparedStatement stmt2 = connect.prepareStatement("Insert into login values(?,?)");
+                    stmt2.setString(1, "Ankush");
+                    stmt2.setString(2, npass);
+                    
+                    stmt2.execute();
+                    
+                    out.println("<strong>Password Changed</strong><br><br>");
+                    out.println("<a href='SignIn.html'>Sign in page</a>");
+from ank.pro0115@gmail.com to All Participants:
+Here i have used 2 resultset obj but getting same error
+from Ratanvikas to All Participants:
+yes sir
+from ppraveen62.ppk@gmail.com to All Participants:
+clear
+from Ratanvikas to All Participants:
+no sir
+from kunalfzk2001 to All Participants:
+sir i have server error : server start to failed.
+from kunalfzk2001 to All Participants:
+i have done

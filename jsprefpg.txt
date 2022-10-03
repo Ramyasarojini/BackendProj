@@ -1,0 +1,18 @@
+from Thaneshwar . to All Participants:
+<h1> We are inserted the data ....!</h1>
+        <h2>There are 3 types of TAGS WE HAVE </h4>
+        <h4>Declaration TAG :  &lt;%! %>  </h4>
+        <h4>Screrplet  TAG :  &lt;% %>  </h4>
+        <h4>Ecpression tag TAG :  &lt;%= %>  </h4>
+        <%! 
+                int a =100;
+                int b=200;
+                int c;
+                
+        %>
+        <%
+                    c = a+b;
+                out.print("My Result is :"+ c);
+        %>
+        <br> The Result of A + B : <%=c%>
+        

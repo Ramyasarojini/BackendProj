@@ -1,0 +1,11 @@
+create table emp 
+(
+    id number(5) primary key,
+    name varchar(10) not null,
+    Age number(3) check (age < 60),
+    salary number(8) check (salary > 25000),
+    Desig varchar(7) default 'GET',
+    PAN varchar(6) unique
+)
+insert into  emp values('900','Abi',35,25001,'','VVD14');
+insert into  emp(id,name,age,salary,pan) values('22','Abi',35,25001,'VVD4');

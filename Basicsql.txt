@@ -1,0 +1,9 @@
+create databases batch6
+use batch6
+show tables 
+create table Emp(id int(5),Name varchar(10),Age int(2) ,desig varchar(10));
+select * from emp;
+ desc emp;
+select * from emp;
+insert into emp values(100,"Thanesh",25,"Dev");
+ insert into emp values(200,"Ramesh",35,"Manager");
